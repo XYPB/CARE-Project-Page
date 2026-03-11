@@ -18,9 +18,9 @@
   <meta property="og:title" content="CARE: Clinical Accountability in Multi-Modal Medical Reasoning">
   <meta property="og:description" content="CARE introduces an evidence-grounded agentic framework for clinically accountable multi-modal medical reasoning, outperforming state-of-the-art by 5.2% on medical VQA benchmarks.">
   <!-- TODO: Replace with your actual website URL once deployed -->
-  <meta property="og:url" content="https://YOUR_DOMAIN.com/CARE">
+  <meta property="og:url" content="https://xypb.github.io/CARE-Project-Page/">
   <!-- TODO: Create a 1200x630px preview image and update path -->
-  <meta property="og:image" content="https://YOUR_DOMAIN.com/static/images/social_preview.png">
+  <meta property="og:image" content="https://xypb.github.io/CARE-Project-Page/static/images/teaser_cropped.png">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
   <meta property="og:image:alt" content="CARE: Clinical Accountability in Multi-Modal Medical Reasoning">
@@ -61,7 +61,6 @@
   
   <!-- Preconnect for performance -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="preconnect" href="https://ajax.googleapis.com">
   <link rel="preconnect" href="https://cdn.jsdelivr.net">
 
@@ -89,8 +88,7 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
   </noscript>
   
-  <!-- Fonts - Optimized loading -->
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <!-- Fonts - System font stack; no external font load needed -->
   
   <!-- Defer non-critical JavaScript -->
   <script defer src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
@@ -362,12 +360,12 @@
       <div class="container is-max-desktop">
         <div class="columns is-centered">
           <div class="column has-text-centered">
-            <h1 class="title is-1 publication-title">CARE: Towards Clinical Accountability in Multi-Modal Medical Reasoning with an Evidence-Grounded Agentic Framework</h1>
+            <h1 class="title is-1 publication-title">CARE: Towards Clinical Accountability<br>in Multi-Modal Medical Reasoning<br>with an Evidence-Grounded Agentic Framework</h1>
             <div class="is-size-5 publication-authors">
               <span class="author-block">
                 <a href="https://XYPB.github.io/" target="_blank">Yuexi Du</a><sup>1,2</sup>,</span>
               <span class="author-block">
-                <a href="https://scholar.google.com/citations?user=lXSN4CkAAAAJ&hl=en" target="_blank">Jinglu Wang</a><sup>1</sup>,</span>
+                <a href="https://scholar.google.com/citations?user=lXSN4CkAAAAJ&hl=en" target="_blank">Jinglu Wang</a><sup>1*</sup>,</span>
               <span class="author-block">
                 <a href="https://scholar.google.com/citations?user=6mNya-wAAAAJ&hl=en" target="_blank">Shujie Liu</a><sup>1</sup>,</span>
               <span class="author-block">
@@ -379,18 +377,19 @@
 
             <div class="is-size-5 publication-authors">
               <span class="author-block">
-                <sup>1</sup>Microsoft Research Asia &nbsp;&nbsp;
+                <sup>1</sup>Microsoft Research Asia &nbsp;&nbsp;<br>
                 <sup>2</sup>Department of Biomedical Engineering, Yale University &nbsp;&nbsp;<br>
-                <sup>3</sup>Department of Radiology &amp; Biomedical Imaging, Yale University
+                <sup>3</sup>Department of Radiology &amp; Biomedical Imaging, Yale University<br>
+                <sup>*</sup>Corresponding Author
               </span>
               <br>
-              <span class="author-block" style="font-weight: 600;">ICLR 2026</span>
+              <span class="author-block" style="font-weight: 600; font-size: 1.5rem;">ICLR 2026</span>
             </div>
 
             <div class="column has-text-centered">
               <div class="publication-links">
                 <span class="link-block">
-                  <a href="https://arxiv.org/pdf/2603.01607" target="_blank"
+                  <a href="https://xypb.github.io/CARE-Project-Page/static/pdfs/ICLR_26___CARE_arXiv.pdf" target="_blank"
                   class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
                     <i class="fas fa-file-pdf"></i>
@@ -637,6 +636,9 @@
         <p class="content has-text-centered" style="font-size: 0.9rem; color: #666; margin-top: 0.5rem;">
           <b>Bold</b> = best, <u>underline</u> = second best. Medical expert VLMs are shown with gray background; our methods are in green.
         </p>
+        <p class="content has-text-centered" style="margin-top: 1rem;">
+          See more ablation experiments and analysis in our <a href="https://xypb.github.io/CARE-Project-Page/static/pdfs/ICLR_26___CARE_arXiv.pdf" target="_blank">paper</a>.
+        </p>
       </div>
     </div>
   </div>
@@ -717,6 +719,34 @@
 <!-- End Qualitative Results -->
 
 
+<!-- Conclusion Section -->
+<section class="section hero is-light" id="conclusion">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Conclusion</h2>
+        <div class="content has-text-justified">
+          <p>
+            We propose <b>CARE</b>, a medical vision reasoning agent that follows a real-world visual-guided clinical decision-making process. Rather than producing a single-shot, black-box output, CARE divides medical decision-making into three interpretable stages with dedicated expert models: <em>identify</em> the entity of interest, <em>localize</em> the ROI on the image, and <em>reason</em> using local visual evidence.
+          </p>
+          <p>
+            Compared to existing methods, CARE not only achieves stronger performance on open benchmarks, but also demonstrates greater <b>accountability</b> and <b>reliability</b>. With a robust coordinator (CARE-Coord), dynamic planning and iterative chain-of-thought review further expand its capability, yielding competitive accuracy in both in-domain and out-of-domain settings.
+          </p>
+
+          <div class="method-step">
+            <h4>Ethics Statement</h4>
+            <p>
+              This work uses only publicly available medical VQA benchmarks (OmniMedVQA, VQA-RAD, SLAKE, VQA-Med-2019) and segmentation data (SA-Med-20M); no new data were collected and no patient interaction occurred. All datasets are used under their respective licenses, with no attempt to re-identify individuals. This system is intended for <b>research use only</b> and must not be used for clinical diagnosis or treatment.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- End Conclusion Section -->
+
+
 <!-- BibTeX Citation -->
 <section class="section" id="BibTeX">
   <div class="container is-max-desktop content">
@@ -749,6 +779,9 @@
           <p>
             This page was built using the <a href="https://github.com/eliahuhorwitz/Academic-project-page-template" target="_blank">Academic Project Page Template</a> which was adopted from the <a href="https://nerfies.github.io" target="_blank">Nerfies</a> project page.
             This website is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/" target="_blank">Creative Commons Attribution-ShareAlike 4.0 International License</a>.
+          </p>
+          <p>
+            This work is done during the internship at MSRA in 2025. We thank the anonymous reviewers for their valuable feedback and suggestions. We also thank our colleagues at MSRA for their support and insightful discussions.
           </p>
         </div>
       </div>
@@ -809,7 +842,7 @@ document.addEventListener('DOMContentLoaded', function() {
         c.save();
         data.datasets[0].data.forEach(function(value, i) {
           const meta = chart.getDatasetMeta(0).data[i];
-          c.font = 'bold 11px Inter, sans-serif';
+          c.font = "bold 11px 'Lucida Sans', 'Lucida Grande', Geneva, Verdana, sans-serif";
           c.fillStyle = '#333';
           c.textAlign = 'center';
           c.textBaseline = 'bottom';
